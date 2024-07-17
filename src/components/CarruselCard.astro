@@ -1,0 +1,25 @@
+---
+import Carrusel from "./Carrusel"
+import { FaGithub } from "react-icons/fa";
+
+const {images, title, description, technologies, link} = Astro.props
+---
+
+<div class="w-full bg-[#372860] rounded-2xl p-2 border-2 border-gray-400">
+    <Carrusel images={images} client:load />
+    <h2 class="text-[#CE79E0] text-3xl mt-5 mb-5">{title}</h2>
+    <p class="text-[#85b0da] text-xl mb-5">
+        {description}
+    </p>
+    <div class="flex mb-5 justify-center rounded-s">
+        {technologies.map((tech)=>{
+            return <a href={tech.link}><img class="w-14 h-14" src={tech.img} alt={tech.alt}/></a>
+        })}
+    </div>
+
+    <div class="flex justify-center">
+      <a href={link}
+        ><FaGithub color="#E24B75" size={55} /></a
+      >
+    </div>
+  </div>

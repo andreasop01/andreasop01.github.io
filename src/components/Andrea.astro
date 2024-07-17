@@ -1,0 +1,76 @@
+---
+import { RiLinkedinFill } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
+---
+
+<div id="andrea" class="flex flex-col justify-center items-center">
+  <img class="rounded-full w-32 lg:hidden" src="/src/img/me.png" alt="Logo" />
+  <h1 class="text-[#CE79E0] text-5xl lg:text-7xl mb-12 mt-12 titulo">
+    ANDREA <span class="text-[#0EFBA5]">LLOVERA DE SOUSA</span>
+  </h1>
+  <img
+    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=25&pause=1000&color=D0C146&width=435&lines=Full+Stack+Developer+%F0%9F%92%BB"
+    alt="fullStack"
+  />
+  <p class="font-semibold">BIENVENIDOS A MI PORFOLIO COMO SOFTWARE DEVELOPER</p>
+  <p class="text-xs leading-8 text-">
+    Si quieres ponerte en contacto conmigo escribeme a
+    <span class="lg:text-xl text-[1rem] underline text-[#0EFBA5]">andreavictoriallove2000@gmail.com </span>.
+  </p>
+
+  <a href="/CVandreaLlovera.pdf" download="CVandreaLlovera.pdf">
+    <button
+      type="button"
+      class="focus:outline-none text-black bg-[#0EFBA5] hover:bg-[#45ffbb] focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+      >Descargar mi CV</button
+    >
+  </a>
+
+  <section class="flex flex-row space-x-7 mt-10">
+    <section
+      class="bg-[#E24B75] w-[55px] h-[55px] flex justify-center items-center rounded-full border-2 border-[#E24B75]"
+    >
+      <a href="https://www.linkedin.com/in/andrea-llovera-de-sousa-07aa351b4"
+        ><RiLinkedinFill color="white" size={45} /></a
+      >
+    </section>
+
+    <section
+      class="bg-white w-[45px] h-[55px] flex justify-center items-center rounded-full border-2 border-[#E24B75]"
+    >
+      <a href="https://github.com/andreasop01"
+        ><FaGithub color="#E24B75" size={55} /></a
+      >
+    </section>
+  </section>
+</div>
+
+<style>
+  @font-face {
+    font-family: titulofonts;
+
+    src: url("/public/fonts/deanicked/Deanicked.ttf");
+  }
+
+  @font-face {
+    font-family: contenidoFonts;
+
+    src: url("/public/fonts/robotoMono/ttf/roboto-mono-latin-400-normal.ttf");
+  }
+
+  .titulo {
+    font-family: titulofonts;
+    text-align: center;
+  }
+
+  div {
+    background-color: #251d44;
+    padding: 15% 2% 15% 2%;
+  }
+
+  div > p {
+    color: #85b0da;
+    font-size: x-large;
+    margin-bottom: 3rem;
+  }
+</style>

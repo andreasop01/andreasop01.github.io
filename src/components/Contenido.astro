@@ -1,0 +1,157 @@
+---
+import { RiLinkedinFill } from "react-icons/ri";
+import { FaGithub } from "react-icons/fa";
+import Contacto from "./Contacto.astro";
+import Andrea from "./Andrea.astro";
+import AboutMe from "./AboutMe.astro";
+import Estudios from "./Estudios.astro";
+import Skills from "./Skills.astro";
+import CarruselCard from "./CarruselCard.astro";
+
+const proyectos = [
+  {
+    title: "SHARETODO APP",
+    description: `Aplicacion para movil y web desarrollada para mi proyecto de fin de
+          curso 2024, se trata de una app para crear tareas que puedes compartir
+          en tiempo real con tus amigos y familiares.`,
+    images: [
+      "/src/img/share1.png",
+      "/src/img/share2.png",
+    ],
+    link: "https://github.com/andreasop01/MyTodoList2",
+    technologies: [
+      {
+        img: "/src/img/visual-studio-code-svgrepo-com.svg",
+        alt: "fotoVisual",
+        link: "https://code.visualstudio.com/",
+      },
+      {
+        img: "/src/img/react-svgrepo-com.svg",
+        alt: "fotoReact",
+        link: "https://es.react.dev",
+      },
+      {
+        img: "/src/img/js-svgrepo-com.svg",
+        alt: "fotoJS",
+        link: "https://es.wikipedia.org/wiki/JavaScript",
+      },
+      {
+        img: "/src/img/nodejs-svgrepo-com.svg",
+        alt: "fotoNodejs",
+        link: "https://nodejs.org/en",
+      },
+      {
+        img: "/src/img/sql-database-generic-svgrepo-com.svg",
+        alt: "fotoSQL",
+        link: "https://en.wikipedia.org/wiki/SQL_Server_Management_Studio",
+      },
+      {
+        img: "/src/img/expo-svgrepo-com.svg",
+        alt: "fotoExpo",
+        link: "https://expo.dev/go",
+      },
+    ],
+  },
+  {
+    title: "PACKMAN APP",
+    description: `Disfruta del clásico Pac-Man en tu Android con controles táctiles
+          intuitivos, gráficos y sonido retro, y compite por la puntuación más
+          alta en esta pequeña recreación desarrollada en Java.`,
+    images: [
+      "/src/img/pacmanP1.png",
+      "/src/img/pacmanP2.png",
+    ],
+    link: "https://github.com/andreasop01/PacmanAndrea",
+    technologies: [
+      {
+        img: "/src/img/logo-google-android-studio-2-svgrepo-com.svg",
+        alt: "fotoAndroid",
+        link: "https://developer.android.com/studio?hl=es-419",
+      },
+      {
+        img: "/src/img/java-svgrepo-com.svg",
+        alt: "fotoJava",
+        link: "https://www.java.com/es/download/ie_manual.jsp",
+      },
+    ],
+  },
+  {
+    title: "BUSCAMINA",
+    description: `Sumérgete en la nostalgia del Buscaminas en tu Android. Experimenta
+          controles táctiles, enfrenta niveles desafiantes, disfruta de un
+          diseño retro, y compite en esta recreación desarrollada en Java.`,
+    images: [
+      "/src/img/buscaP1.png",
+      "/src/img/buscaP2.png",
+    ],
+    link: "https://github.com/andreasop01/BuscaMinaAndrea1",
+    technologies: [
+      {
+        img: "/src/img/logo-google-android-studio-2-svgrepo-com.svg",
+        alt: "fotoAndroid",
+        link: "https://developer.android.com/studio?hl=es-419",
+      },
+      {
+        img: "/src/img/java-svgrepo-com.svg",
+        alt: "fotoJava",
+        link: "https://www.java.com/es/download/ie_manual.jsp",
+      },
+    ],
+  }
+]
+---
+
+<div class="contenido lg:ml-[300px] mt-[150px] lg:mt-0">
+  <Andrea />
+  <hr class="h-0.5 border-t-0 bg-slate-400 dark:bg-white/10">
+  <AboutMe />
+  <hr class="h-0.5 border-t-0 bg-slate-400 dark:bg-white/10">
+  <div id="projects" class="bg-[#251d44] px-[2%]">
+    <h1 class="text-[#CE79E0] text-6xl titulo">Porfolio</h1>
+    <div class="flex flex-col lg:flex-row justify-between gap-2">
+      <!-- Carousel -->
+      {proyectos.map((proyecto) => (
+        <CarruselCard {...proyecto} />
+      ))}
+    </div>
+  </div>
+  <hr class="h-0.5 border-t-0 bg-slate-400 dark:bg-white/10">
+  <Estudios />
+  <hr class="h-0.5 border-t-0 bg-slate-400 dark:bg-white/10">
+  <Skills />
+  <hr class="h-0.5 border-t-0 bg-slate-400 dark:bg-white/10">
+  <div id="contact" class="bg-[#251d44] px-[2%]">
+    <h1 class="text-[#CE79E0] text-6xl titulo mb-6">¡CONTACTAME!</h1>
+    <Contacto />
+  </div>
+</div>
+
+<style>
+
+
+
+  .titulo {
+      font-family: titulofonts;
+    }
+
+  .contenido > div {
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+  
+  .contenido {
+    flex: 1;
+    min-height: 100vh;
+    font-family: contenidoFonts;
+  }
+
+
+
+  .contenido > div > .lenguaje {
+    margin-bottom: 10px;
+  }
+  .contenido > div > .texto {
+    margin-top: 1rem;
+    font-size: 20px;
+  }
+</style>
